@@ -1,0 +1,26 @@
+<tui-input style="margin-bottom: 1em" [(ngModel)]="inputValue">Placeholder..</tui-input>
+
+<div style="display: flex; justify-content: space-between">
+    <tui-multi-select
+            *tuiLet="list$ | async as currencyList"
+            style="width: 250px"
+            [(ngModel)]="value"
+            [tuiTextfieldLabelOutside]="true"
+    >
+
+        <ng-template tuiDataList tuiMultiSelectGroup>
+            <tui-data-list *ngIf="currencyList; else loading">
+                <button *ngFor="let currency of currencyList" tuiOption [value]="currency">{{ currency }}</button>
+            </tui-data-list>
+
+            <ng-template #loading>
+                <tui-loader class="tui-space_vertical-3 loader"></tui-loader>
+            </ng-template>
+        </ng-template>
+    </tui-multi-select>
+
+    <button tuiButton (click)="buttonEvent()">
+        click me!
+    </button>
+</div>
+
