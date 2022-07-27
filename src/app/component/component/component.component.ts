@@ -35,7 +35,7 @@ export class ComponentComponent implements OnInit {
         .open(
             new PolymorpheusComponent(TestDialogComponent, this.injector),
             {
-              dismissible: false,
+              dismissible: true,
               label: 'Создание договора',
               size: 'l',
             }

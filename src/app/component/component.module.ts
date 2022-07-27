@@ -8,31 +8,34 @@ import {
   TuiRootModule,
   TuiTextfieldControllerModule
 } from "@taiga-ui/core";
-import {TuiInputModule, TuiIslandModule, TuiMultiSelectModule} from "@taiga-ui/kit";
+import {TuiInputDateTimeModule, TuiInputModule, TuiIslandModule, TuiMultiSelectModule} from "@taiga-ui/kit";
 import { TestDialogComponent } from './dialogs/test-dialog/test-dialog.component';
-import {TuiLetModule} from "@taiga-ui/cdk";
-import {FormsModule} from "@angular/forms";
+import { TuiLetModule } from "@taiga-ui/cdk";
+import { FormsModule } from "@angular/forms";
+import { AnotherDialogComponent } from './dialogs/another-dialog/another-dialog.component';
 
 
 
 @NgModule({
   declarations: [
     ComponentComponent,
-    TestDialogComponent
+    TestDialogComponent,
+    AnotherDialogComponent
   ],
-  imports: [
-    CommonModule,
-    TuiRootModule,
-    TuiIslandModule,
-    TuiButtonModule,
-    TuiDataListModule,
-    TuiLetModule,
-    FormsModule,
-    TuiTextfieldControllerModule,
-    TuiLoaderModule,
-    TuiMultiSelectModule,
-    TuiDialogModule,
-    TuiInputModule,
-  ]
+    imports: [
+        CommonModule,
+        TuiRootModule,
+        TuiIslandModule,
+        TuiButtonModule,
+        TuiDataListModule,
+        TuiLetModule,
+        FormsModule,
+        TuiTextfieldControllerModule,
+        TuiLoaderModule,
+        TuiMultiSelectModule,
+        TuiDialogModule,
+        TuiInputModule,
+        TuiInputDateTimeModule,
+    ]
 })
 export class ComponentModule { }

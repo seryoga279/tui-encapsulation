@@ -1,6 +1,6 @@
 <tui-input style="margin-bottom: 1em" [(ngModel)]="inputValue">Placeholder..</tui-input>
 
-<div style="display: flex; justify-content: space-between">
+<div style="display: flex; justify-content: space-between; margin-bottom: 1em">
     <tui-multi-select
             *tuiLet="list$ | async as currencyList"
             style="width: 250px"
@@ -21,6 +21,16 @@
 
     <button tuiButton (click)="buttonEvent()">
         click me!
+    </button>
+</div>
+
+<div style="display: flex; justify-content: space-between">
+    <tui-input-date-time [(ngModel)]="datetime" timeMode="HH:MM" style="width: 250px" >
+        Choose date and time
+    </tui-input-date-time>
+
+    <button tuiButton (click)="openDialog()">
+        open dialog
     </button>
 </div>
 
